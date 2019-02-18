@@ -11,7 +11,7 @@ For now this library is based on a slice and has no *pop* or *deletion* features
 ### Basic usage
 
 ```go
-l := simplist.NewList()
+l := simplist.New()
 
 expFirstMsg := Message{Level: 2, Content: "this is the first message"}
 expLastMsg := Message{Level: 2, Content: "this is the last message"}
