@@ -13,7 +13,7 @@ type Message struct {
 }
 
 func TestEmptylist(t *testing.T) {
-	l := simplist.NewList()
+	l := simplist.New()
 
 	if l.Count() != 0 {
 		t.Error("list not empty or error creating it")
@@ -29,7 +29,7 @@ func TestEmptylist(t *testing.T) {
 }
 
 func TestAddMessage(t *testing.T) {
-	l := simplist.NewList()
+	l := simplist.New()
 
 	expMsg := Message{Level: 4, Content: "error message added"}
 	l.Push(expMsg)
@@ -49,7 +49,7 @@ func TestAddMessage(t *testing.T) {
 }
 
 func TestPositionToFront(t *testing.T) {
-	l := simplist.NewList()
+	l := simplist.New()
 
 	_, ok := l.Front()
 	if ok != false {
@@ -74,7 +74,7 @@ func TestPositionToFront(t *testing.T) {
 }
 
 func TestPositionToTheBack(t *testing.T) {
-	l := simplist.NewList()
+	l := simplist.New()
 
 	_, ok := l.Back()
 	if ok != false {
@@ -99,7 +99,7 @@ func TestPositionToTheBack(t *testing.T) {
 }
 
 func TestPrevAndNextWithOneElement(t *testing.T) {
-	l := simplist.NewList()
+	l := simplist.New()
 
 	l.Push(Message{Level: 2, Content: "element"})
 	l.Front()
@@ -114,7 +114,7 @@ func TestPrevAndNextWithOneElement(t *testing.T) {
 }
 
 func TestIterationOnlist(t *testing.T) {
-	l := simplist.NewList()
+	l := simplist.New()
 
 	expFirstMsg := Message{Level: 2, Content: "this is the first message"}
 	expLastMsg := Message{Level: 2, Content: "this is the last message"}

@@ -11,9 +11,9 @@ type List struct {
 	rw    *sync.RWMutex
 }
 
-// NewList is a factory convenience method to initialize a
+// New is a factory convenience method to initialize a
 // new List.
-func NewList() *List {
+func New() *List {
 	return &List{
 		ee:  make([]interface{}, 0, 2),
 		idx: -1,
